@@ -22,4 +22,6 @@ function giveCompliment(name) {
   return `You are ${randomCompliment}, ${name}`;
 }
 
-console.log(giveCompliment('Noer'));
+console.log(giveCompliment('Abuzer ALACA'));
+console.log(giveCompliment('Abuzer ALACA'));
+console.log(giveCompliment('Abuzer ALACA'));
