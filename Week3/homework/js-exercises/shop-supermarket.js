@@ -1,17 +1,16 @@
 'use strict';
 
-function addToShoppingCart(groceryItem) {
-  let groceryItemList = ['banana', 'milk'];
+let groceryItemList = ['banana', 'milk'];
 
-  if (groceryItemList.length < 3) {
-    groceryItemList.push(groceryItem);
-  } else {
-    groceryItemList.push(groceryitem);
-    groceryItemList.shift();
+function addToShoppingCart(groceryItem, arr = []) {
+  arr.push(groceryItem);
+
+  if (arr.length > 3) {
+    arr.shift();
   }
-  return `You bought ${groceryItemList}!`;
+  return `You bought ${arr}!`;
 }
 
-console.log(addToShoppingCart('rice'));
-console.log(addToShoppingCart('cheese'));
-console.log(addToShoppingCart('meat'));
+console.log(addToShoppingCart('rice', groceryItemList));
+console.log(addToShoppingCart('cheese', groceryItemList));
+console.log(addToShoppingCart('meat', groceryItemList));

@@ -2,13 +2,19 @@
 
 function cardValidator(cardNumber) {
   let endMessage = '';
+
   const cardNumberAsString = cardNumber.toString();
+
   let sum = 0;
+
   let digitsAsArray = cardNumberAsString.split('');
+
   let allSameDigit = digitsAsArray.every((val, i, arr) => val === arr[0]);
+
   for (let i = 0; i < cardNumberAsString.length; i++) {
     sum += parseInt(cardNumberAsString[i]);
   }
+
   if (cardNumberAsString.length !== 16) {
     endMessage = `The credit card number is not valid because the credit card number you entered has more than 16 digits please try again.`;
   } else if (allSameDigit) {
