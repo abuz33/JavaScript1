@@ -16,14 +16,7 @@ let jobTitle = [
 ];
 
 function tellMyFortune(childNumber, partnerName, location, jobTitle) {
-  return `You will be a ${jobTitle} in ${location}, and married to ${partnerName} with ${childNumber} kids.`;
+  return `You will be a ${jobTitle.sample()} in ${location.sample()}, and married to ${partnerName.sample()} with ${childNumber.sample()} kids.`;
 }
 
-console.log(
-  tellMyFortune(
-    childNumber.sample(),
-    partnerName.sample(),
-    location.sample(),
-    jobTitle.sample()
-  )
-);
+console.log(tellMyFortune(childNumber, partnerName, location, jobTitle));
