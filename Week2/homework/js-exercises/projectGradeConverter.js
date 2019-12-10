@@ -1,21 +1,29 @@
 'use strict';
 
 function gradeConverter(result) {
+  let msg = '';
+  let grade = '';
   if (result < 0 || result > 100) {
-    console.log(`The value ${result} is not valid`);
+    msg = `The value ${result} is not valid`;
   } else if (result < 50) {
-    console.log(`You got an F (${result}%)!`);
+    grade = 'F';
   } else if (result < 60) {
-    console.log(`You got an E (${result}%)!`);
+    grade = 'E';
   } else if (result < 70) {
-    console.log(`You got an D (${result}%)!`);
+    grade = 'D';
   } else if (result < 80) {
-    console.log(`You got an C (${result}%)!`);
+    grade = 'C';
   } else if (result < 90) {
-    console.log(`You got an B (${result}%)!`);
+    grade = 'B';
   } else if (result < 100) {
-    console.log(`You got an A (${result}%)!`);
+    grade = 'A';
+  }
+
+  if (msg == `The value ${result} is not valid`) {
+    return `The value ${result} is not valid`;
+  } else {
+    return `You got an ${grade} (${result}%)!`;
   }
 }
 
-gradeConverter(125);
+console.log(gradeConverter(75));

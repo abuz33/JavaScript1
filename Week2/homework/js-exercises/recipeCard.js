@@ -1,7 +1,7 @@
 'use strict';
 
 const recipeCard = {
-  'Name of the meal': 'Menemen',
+  nameOfTheMeal: 'Menemen',
   serves: 4,
   ingredients: [
     '4 large free range eggs',
@@ -16,11 +16,15 @@ const recipeCard = {
   ]
 };
 
-for (let name in recipeCard) {
-  if (Array.isArray(recipeCard[name])) {
-    console.log(`${name} :`);
-    for (let part of recipeCard[name]) console.log(`${part}`);
+for (const attribute in recipeCard) {
+  if (Array.isArray(recipeCard[attribute])) {
+    console.log(`${attribute.match(/[A-Z][a-z]+|[0-9]+/g).join(' ')} :`);
+    for (let part of recipeCard[attribute]) console.log(`${part}`);
   } else {
-    console.log(`${name} : ${recipeCard[name]}`);
+    console.log(
+      `${attribute.match(/[A-Z][a-z]+|[0-9]+/g).join(' ')} : ${
+        recipeCard[attribute]
+      }`
+    );
   }
 }

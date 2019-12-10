@@ -18,7 +18,7 @@ const myReadingList = [
   }
 ];
 
-for (let book of myReadingList) {
+for (const book of myReadingList) {
   console.log(`${book.title} by ${book.author}`);
   if (book.alreadyRead === true) {
     console.log(`You already read ${book.title}\n`);

@@ -1,15 +1,11 @@
 'use strict';
 
-let drinkTray = [];
+const drinkTray = [];
 
 const drinks = ['cola', 'lemonade', 'water'];
 
-for (let i = 0; i < 5; i++) {
-  if (i < 2) {
-    drinkTray.push(drinks[i]);
-  } else {
-    drinkTray.push(drinks[i - 2]);
-  }
+for (const i = 0; i < 5; i++) {
+  drinkTray.push(drinks[i % drinks.length]);
 }
 
 console.log(
